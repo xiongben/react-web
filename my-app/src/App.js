@@ -4,9 +4,11 @@ import './App.css';
 import 'video-react/dist/video-react.css';
 import { Player } from 'video-react';
 import { Button } from 'antd-mobile';
+import styles from './ss.module.css';
 ;
 
 function App() {
+  console.log(styles);
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +21,7 @@ function App() {
           <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
         </Player>
         <Button style={{width:'100px'}}>Start</Button>
+        <p className={styles.ss}>999999999</p>
         </div>
       </header>
     </div>
