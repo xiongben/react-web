@@ -3,9 +3,25 @@ import logo from './logo.svg';
 import './App.css';
 import 'video-react/dist/video-react.css';
 import { Player } from 'video-react';
-import { Button } from 'antd-mobile';
+import { Button ,Menu, ActivityIndicator, NavBar} from 'antd-mobile';
 import styles from './ss.module.css';
 ;
+
+
+const data = [
+  {
+    value: '1',
+    label: 'Food',
+  }, {
+    value: '2',
+    label: 'Supermarket',
+  },
+  {
+    value: '3',
+    label: 'Extra',
+    isLeaf: true,
+  },
+];
 
 function App() {
   console.log(styles);
@@ -24,6 +40,17 @@ function App() {
         <p className={styles.ss}>999999999</p>
         </div>
       </header>
+      <div className="ss"></div>
+      <div>
+          <NavBar
+            leftContent="Menu"
+            mode="light"
+            
+            className="single-top-nav-bar"
+          >
+            OneLevel menu
+          </NavBar>
+        </div>
     </div>
   );
 }
